@@ -389,8 +389,7 @@ public class MainActivity extends Activity {
   InputStream stream=code>=200&&code<400?c.getInputStream():c.getErrorStream();
   StringBuilder sb=new StringBuilder();
   if(stream!=null)try(BufferedReader br=new BufferedReader(new InputStreamReader(stream,StandardCharsets.UTF_8))){
-   String line;while((line=br.readLine())!=null)sb.append(line).append('
-');
+   String line;while((line=br.readLine())!=null)sb.append(line).append("\\n");
   }
   c.disconnect();
   return new HttpResult(code>=200&&code<300,code,sb.toString().trim());
