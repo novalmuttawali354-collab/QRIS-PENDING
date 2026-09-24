@@ -1,0 +1,4 @@
+plugins { id 'com.android.application' }
+android { namespace 'com.citawin.autorekap'; compileSdk 35
+    defaultConfig { applicationId 'com.citawin.autorekap'; minSdk 24; targetSdk 35; versionCode 1; versionName '1.0' }
+}
